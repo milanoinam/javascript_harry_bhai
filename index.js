@@ -288,5 +288,66 @@ firstContainer.addEventListener("click",function(){
     console.log("Clicked on container")
 })
 
-// mousehover
-// 
+// mouseover event
+
+// firstContainer.addEventListener("mouseover",function(){
+//     console.log("Mouse on Container")
+// })
+// firstContainer.addEventListener("mouseout",function(){
+//     console.log("Mouse out of Container")
+// })
+firstContainer.addEventListener("mouseup",function(){
+    console.log("Mouse up when clicked on Container")
+})
+firstContainer.addEventListener("mousedown",function(){
+    console.log("Mouse down when clicked on Container")
+})
+
+firstContainer.addEventListener("click",function(){
+    document.querySelectorAll('.container')[1].innerHTML = "<b>We have clicked</b>"
+    console.log("clicked on container")
+})
+
+
+logKaro = ()=> {
+    console.log("I am your log")
+}
+
+setTimeout(logKaro, 2000);
+
+
+clr = setInterval(logKaro, 2000);
+
+clearInterval(clr)
+// use clearInterval/clearTimeout(clr) to cancel setInterview/setIime
+
+// JavaScript Local Storage
+// localStorage.setItem('name','harry')
+
+// there is a local storage for every domain
+// localStorage.getItem("name")
+// localStorage.removeItem("name")
+// lovalStorage.clear()
+
+// Don't store sensitive data
+
+
+// JSON : 
+// 1. JavaScript Object Notation
+// 2. file format used for data transport
+// 3. JSON only supports double quotes
+// but JavaScript object supports both double quotes and single quotes
+obj = {name: "harry", length: 1, a:{this:"that"}}
+jso = JSON.stringify(obj) // converted into a string
+console.log(jso)
+console.log(typeof(jso))
+
+parsed = JSON.parse(`{"name":"harry","length":1,"a":{"this":"that"}}`) // backticks can also be used for strings
+
+console.log(parsed)
+
+// ECMAScript or ES : it's a JavaScript standard
+
+// Template literals : Backticks
+a = 34;
+console.log(`this is my ${a}`) // using backticks
